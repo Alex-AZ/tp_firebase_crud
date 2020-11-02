@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog System</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1>Firebase CRUD</h1>
+  
+    <!-- add user module -->
+    <section id="add-user-module" >
+        <button id="open-add-user-form-btn">+</button>
+        <form id="leFormulaireAjout">
+            <h2>Add User</h2>
+            name:<br>
+            <input type='text' data-key='name' class='user-input'><br>
+            age:<br>
+            <input type='text' data-key='age' class='user-input'><br>
+            email:<br>
+            <input type='text' data-key='email' class='user-input'><br>
+            <button type='button' id="add-user-btn">add user</button>
+        </form>
+    </section>
+
+    <!-- edit user module -->
+    <section id="edit-user-module">
+        <form>
+            <h2>Edit user</h2>
+            <input type="hidden" class="edit-userid">
+            name:<br>
+            <input type='text' data-key='name' class='edit-user-input'><br>
+            age:<br>
+            <input type='text' data-key='age' class='edit-user-input'><br>
+            email:<br>
+            <input type='text' data-key='email' class='edit-user-input'><br>
+            <button type='button' id="edit-user-btn">save</button>
+        </form>
+    </section>
+
+    <!-- show user module -->
+    <ul id="user-list"></ul>
+    <div id="user-detail"></div>
+        <!-- firebase sdk link goes here -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
